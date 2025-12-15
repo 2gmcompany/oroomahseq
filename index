@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OROOMA | Em Construção</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background: linear-gradient(135deg, #0b1f3a, #0f3c5f);
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            text-align: center;
+            padding: 40px;
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .logo {
+            font-size: 42px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+            color: #00c2ff;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #d1e9f5;
+        }
+
+        .construction {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #e0e0e0;
+        }
+
+        .contact {
+            font-size: 14px;
+            margin-top: 20px;
+            color: #b8dbe8;
+        }
+
+        .contact a {
+            color: #00c2ff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 12px;
+            color: #9fbac6;
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 32px;
+            }
+
+            .construction {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo">OROOMA</div>
+        <div class="subtitle">Health • Safety • Environment • Quality</div>
+
+        <div class="construction">🚧 Site em Construção</div>
+
+        <div class="description">
+            Estamos a trabalhar para lançar uma plataforma moderna, segura e alinhada
+            com os mais elevados padrões de qualidade e inovação.
+            <br><br>
+            Em breve, a OROOMA estará totalmente online.
+        </div>
+
+        <div class="contact">
+            Contacto provisório:  
+            <a href="mailto:info@oroomahseq.co.mz">info@oroomahseq.co.mz</a>
+        </div>
+
+        <div class="footer">
+            © 2025 OROOMA. Todos os direitos reservados.
+        </div>
+    </div>
+
+</body>
+</html>
