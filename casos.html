@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casos de Estudo & Metodologia | Orooma, Lda</title>
+    <meta name="description" content="Descubra como a Orooma ajuda empresas em Moçambique a atingirem a excelência e conformidade através de Sistemas de Gestão ISO.">
+    
+    <link rel="icon" href="favicon.png" type="image/png">
+    
+    <style>
+        /* ================= GERAIS E VARIÁVEIS ================= */
+        :root { --primary-green: #16a34a; --dark-gray: #1e293b; --light-gray: #f8fafc; --white: #ffffff; --text-gray: #475569; --border-color: #e2e8f0; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; scroll-behavior: smooth; }
+        body { line-height: 1.6; color: var(--text-gray); background-color: var(--light-gray); }
+        h1, h2, h3, h4 { color: var(--dark-gray); font-weight: 700; }
+        a { text-decoration: none; color: var(--primary-green); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 4rem 5%; }
+        .section-header { text-align: center; margin-bottom: 4rem; }
+        .section-header h2 { font-size: 2.5rem; margin-bottom: 1rem; position: relative; display: inline-block; }
+        .section-header h2::after { content: ''; position: absolute; left: 50%; transform: translateX(-50%); bottom: -10px; width: 60px; height: 4px; background-color: var(--primary-green); }
+
+        /* ================= HEADER / MENU ================= */
+        header { display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; background-color: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+        .logo img { max-height: 50px; width: auto; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: var(--dark-gray); font-weight: 600; transition: color 0.3s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--primary-green); }
+        .btn-cta-nav { background-color: var(--primary-green); color: var(--white); padding: 0.6rem 1.5rem; border-radius: 4px; font-weight: 600; transition: background 0.3s; }
+        .btn-cta-nav:hover { background-color: #15803d; color: var(--white); }
+
+        /* ================= HEADER SECUNDÁRIO ================= */
+        .page-header { background-color: var(--dark-gray); color: var(--white); padding: 5rem 5%; text-align: center; border-bottom: 5px solid var(--primary-green); }
+        .page-header h1 { font-size: 3rem; margin-bottom: 1rem; color: var(--white); }
+        .page-header p { font-size: 1.2rem; max-width: 800px; margin: 0 auto; color: #cbd5e1; font-style: italic; }
+
+        /* ================= CASOS DE ESTUDO CSS ================= */
+        .cases-container { max-width: 1200px; margin: 0 auto; padding: 0 5%; }
+        .case-card { background: var(--white); border-radius: 8px; overflow: hidden; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); margin-bottom: 4rem; display: flex; flex-wrap: wrap; border: 1px solid var(--border-color); }
+        .case-card:nth-child(even) { flex-direction: row-reverse; }
+        .case-image { flex: 1; min-width: 300px; background-size: cover; background-position: center; min-height: 350px; }
+        .case-content { flex: 1.5; padding: 3rem; min-width: 300px; }
+        .case-client { font-size: 0.9rem; font-weight: bold; color: var(--primary-green); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; display: block; }
+        .case-title { font-size: 2rem; margin-bottom: 1.5rem; line-height: 1.2; color: var(--dark-gray); }
+        .case-meta { display: flex; gap: 2rem; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); flex-wrap: wrap; }
+        .meta-item { display: flex; flex-direction: column; }
+        .meta-item span.label { font-size: 0.85rem; color: #64748b; text-transform: uppercase; }
+        .meta-item span.value { font-weight: bold; color: var(--dark-gray); }
+        .case-description p { margin-bottom: 1rem; }
+        .case-results { margin-top: 1.5rem; background-color: var(--light-gray); padding: 1.5rem; border-left: 4px solid var(--primary-green); border-radius: 0 4px 4px 0; }
+        .case-results h4 { margin-bottom: 0.5rem; color: var(--dark-gray); }
+        .case-results ul { list-style-position: inside; color: var(--text-gray); }
+        .case-results li { margin-bottom: 0.5rem; }
+
+        /* ================= METODOLOGIA CSS ================= */
+        .methodology-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem; max-width: 1200px; margin-left: auto; margin-right: auto; padding: 0 5%; }
+        .step-card { text-align: center; padding: 2.5rem 2rem; background: var(--white); border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-bottom: 4px solid var(--primary-green); transition: transform 0.3s; }
+        .step-card:hover { transform: translateY(-5px); }
+        .step-number { background-color: var(--primary-green); color: var(--white); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 1.5rem auto; }
+
+        /* ================= FOOTER ================= */
+        footer { background-color: var(--dark-gray); color: #cbd5e1; padding: 4rem 5% 2rem 5%; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; max-width: 1200px; margin: 0 auto; border-bottom: 1px solid #334155; padding-bottom: 3rem; margin-bottom: 2rem; }
+        .footer-logo img { max-height: 40px; margin-bottom: 1rem; filter: brightness(0) invert(1); }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 0.8rem; display: flex; align-items: center; gap: 10px; }
+        .footer-links a { color: #cbd5e1; transition: color 0.3s; }
+        .footer-links a:hover { color: var(--primary-green); }
+        .footer-bottom { text-align: center; font-size: 0.9rem; }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .case-card { flex-direction: column !important; }
+            .case-meta { gap: 1rem; }
+            .page-header h1 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">
+            <img src="logo-orooma.png" alt="Orooma, Lda">
+        </a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="servicos.html">Soluções HSEQ</a></li>
+                <li><a href="casos.html" class="active">Casos de Estudo</a></li>
+                <li><a href="contacto.html">Fale Connosco</a></li>
+            </ul>
+        </nav>
+        <a href="solicitar-diagnostico.html" class="btn-cta-nav">Pedir Diagnóstico</a>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Resultados Reais no Terreno</h1>
+            <p>"Não vendemos teoria. Descubra como a Orooma implementa Sistemas de Gestão práticos que reduzem riscos e preparam empresas moçambicanas para as exigências do mercado."</p>
+        </section>
+
+        <section style="padding: 6rem 0;">
+            <div class="cases-container">
+                <article class="case-card">
+                    <div class="case-image" style="background-image: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');"></div>
+                    <div class="case-content">
+                        <span class="case-client">Cliente: Empresa 1</span>
+                        <h3 class="case-title">Integração do Sistema de Gestão da Qualidade em Estrutura Holding</h3>
+                        <div class="case-meta">
+                            <div class="meta-item"><span class="label">Serviço</span><span class="value">ISO 9001:2015</span></div>
+                            <div class="meta-item"><span class="label">Dimensão</span><span class="value">14 Colaboradores</span></div>
+                            <div class="meta-item"><span class="label">Sector</span><span class="value">Consultoria Ambiental & Logística</span></div>
+                        </div>
+                        <div class="case-description">
+                            <p>A Empresa 1 enfrentava o desafio de padronizar processos transversais entre duas das suas principais unidades de negócio: uma focada em EIAs e auditorias ambientais, e outra focada em procurement e logística. A Orooma foi selecionada para alinhar a gestão estratégica e técnica da holding.</p>
+                            <p>O projeto exigiu uma abordagem cirúrgica para garantir a flexibilidade na gestão de consultores externos, sem comprometer o rigor da Norma ISO 9001.</p>
+                        </div>
+                        <div class="case-results">
+                            <h4>Ações e Resultados Orooma:</h4>
+                            <ul>
+                                <li>Mapeamento integrado de processos de prestação de serviços.</li>
+                                <li>Capacitação da equipa para realização de auditorias internas.</li>
+                                <li>Estruturação documental pronta para a Auditoria Externa de Fase 1.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="case-card">
+                    <div class="case-image" style="background-image: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');"></div>
+                    <div class="case-content">
+                        <span class="case-client">Cliente: Empresa 2</span>
+                        <h3 class="case-title">Certificação de Qualidade e Controlo Operacional em 4 Meses</h3>
+                        <div class="case-meta">
+                            <div class="meta-item"><span class="label">Serviço</span><span class="value">ISO 9001:2015</span></div>
+                            <div class="meta-item"><span class="label">Duração</span><span class="value">4 Meses</span></div>
+                            <div class="meta-item"><span class="label">Local</span><span class="value">Maputo e Matola</span></div>
+                        </div>
+                        <div class="case-description">
+                            <p>Para a Empresa 2, a excelência operacional exigia criar no espírito de todos os envolvidos a ideia de que a qualidade é realizada por cada colaborador no seu posto de trabalho, evitando a passagem de erros nas operações críticas.</p>
+                            <p>A Orooma desenhou um plano acelerado e intensivo, combinando consultoria presencial na Sede e no Armazém, garantindo que a operação comercial não fosse interrompida.</p>
+                        </div>
+                        <div class="case-results">
+                            <h4>Ações e Resultados Orooma:</h4>
+                            <ul>
+                                <li>Elaboração de Matriz de Riscos e Oportunidades do negócio.</li>
+                                <li>Formação especializada para Gestores de Qualidade.</li>
+                                <li>Desenvolvimento de critérios para avaliação de fornecedores.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="case-card">
+                    <div class="case-image" style="background-image: url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');"></div>
+                    <div class="case-content">
+                        <span class="case-client">Cliente: Empresa 3</span>
+                        <h3 class="case-title">Planeamento Estratégico e Qualidade Total</h3>
+                        <div class="case-meta">
+                            <div class="meta-item"><span class="label">Serviço</span><span class="value">ISO 9001:2015</span></div>
+                            <div class="meta-item"><span class="label">Duração</span><span class="value">4 Meses</span></div>
+                            <div class="meta-item"><span class="label">Local</span><span class="value">Maputo</span></div>
+                        </div>
+                        <div class="case-description">
+                            <p>A Empresa 3 necessitava de uma revisão profunda dos seus processos atuais e da identificação de áreas de melhoria para alinhar os seus serviços com os requisitos internacionais da ISO 9001:2015.</p>
+                            <p>A intervenção da Orooma focou-se fortemente na fase de Análise e Diagnóstico, garantindo o levantamento de pontos críticos e estabelecendo metas e KPIs de desempenho.</p>
+                        </div>
+                        <div class="case-results">
+                            <h4>Ações e Resultados Orooma:</h4>
+                            <ul>
+                                <li>Formalização completa do manual, políticas e instruções de trabalho.</li>
+                                <li>Monitoria contínua da eficácia das implementações efetuadas.</li>
+                                <li>Auditorias internas simuladas para garantir zero surpresas na certificação.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section style="padding: 4rem 0 8rem 0;">
+            <div class="section-header">
+                <h2>A Metodologia Orooma</h2>
+                <p>Um processo faseado e transparente, desenhado para causar a mínima disrupção nas suas operações diárias.</p>
+            </div>
+            <div class="methodology-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h4 style="margin-bottom: 1rem; color: var(--dark-gray);">Análise e Diagnóstico</h4>
+                    <p style="font-size: 0.95rem; color: var(--text-gray);">Revisão dos processos, identificação de áreas de melhoria e levantamento de pontos críticos (Gap Analysis).</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h4 style="margin-bottom: 1rem; color: var(--dark-gray);">Planeamento</h4>
+                    <p style="font-size: 0.95rem; color: var(--text-gray);">Definição do plano estratégico, estabelecimento de metas, indicadores de desempenho (KPIs) e cronograma.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h4 style="margin-bottom: 1rem; color: var(--dark-gray);">Implementação</h4>
+                    <p style="font-size: 0.95rem; color: var(--text-gray);">Execução do plano, formalização da documentação e capacitação das equipas operacionais no terreno.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h4 style="margin-bottom: 1rem; color: var(--dark-gray);">Avaliação e Ajustes</h4>
+                    <p style="font-size: 0.95rem; color: var(--text-gray);">Monitoria da eficácia, realização de auditorias internas simuladas e tratamento de não conformidades.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <a href="index.html" style="display: block; margin-bottom: 1rem;"><img src="logo-orooma.png" alt="Orooma, Lda"></a>
+                <p style="margin-top: 1rem;">Consultoria estratégica em Saúde, Segurança, Ambiente e Qualidade em Moçambique.</p>
+            </div>
+            <div>
+                <h4>Navegação</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre a Orooma</a></li>
+                    <li><a href="servicos.html">Soluções HSEQ</a></li>
+                    <li><a href="contacto.html">Fale Connosco</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Redes Sociais Orooma</h4>
+                <ul class="footer-links">
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        <a href="https://www.linkedin.com/company/orooma-hseq" target="_blank">LinkedIn</a>
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        <a href="https://www.instagram.com/orooma_hseq" target="_blank">Instagram</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Orooma, Lda. Todos os direitos reservados. NUIT: 401907378.</p>
+        </div>
+    </footer>
+</body>
+</html>

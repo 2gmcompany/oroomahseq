@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós | Orooma, Lda</title>
+    <meta name="description" content="Conheça a Orooma, Lda. Especialistas em Saúde, Segurança, Ambiente e Qualidade (HSEQ) em Moçambique.">
+    
+    <link rel="icon" href="favicon.png" type="image/png">
+    
+    <style>
+        /* ================= GERAIS E VARIÁVEIS ================= */
+        :root { --primary-green: #16a34a; --dark-gray: #1e293b; --light-gray: #f8fafc; --white: #ffffff; --text-gray: #475569; --border-color: #e2e8f0; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; scroll-behavior: smooth; }
+        body { line-height: 1.6; color: var(--text-gray); background-color: var(--white); }
+        h1, h2, h3, h4 { color: var(--dark-gray); font-weight: 700; }
+        a { text-decoration: none; color: var(--primary-green); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 4rem 5%; }
+        .section-header { text-align: center; margin-bottom: 4rem; }
+        .section-header h2 { font-size: 2.5rem; margin-bottom: 1rem; position: relative; display: inline-block; }
+        .section-header h2::after { content: ''; position: absolute; left: 50%; transform: translateX(-50%); bottom: -10px; width: 60px; height: 4px; background-color: var(--primary-green); }
+
+        /* ================= HEADER / MENU ================= */
+        header { display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; background-color: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+        .logo img { max-height: 50px; width: auto; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: var(--dark-gray); font-weight: 600; transition: color 0.3s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--primary-green); }
+        .btn-cta-nav { background-color: var(--primary-green); color: var(--white); padding: 0.6rem 1.5rem; border-radius: 4px; font-weight: 600; transition: background 0.3s; }
+        .btn-cta-nav:hover { background-color: #15803d; color: var(--white); }
+
+        /* ================= HEADER SECUNDÁRIO ================= */
+        .page-header { background-color: var(--dark-gray); color: var(--white); padding: 5rem 5%; text-align: center; border-bottom: 5px solid var(--primary-green); }
+        .page-header h1 { font-size: 3rem; margin-bottom: 1rem; color: var(--white); }
+        .page-header p { font-size: 1.2rem; max-width: 800px; margin: 0 auto; color: #cbd5e1; }
+
+        /* ================= SOBRE NÓS CSS ================= */
+        .about-section { padding: 5rem 5%; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .about-text p { font-size: 1.1rem; margin-bottom: 1.5rem; }
+        .about-image { width: 100%; min-height: 450px; border-radius: 8px; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); border-left: 8px solid var(--primary-green); background-image: url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'); background-size: cover; background-position: center; }
+        
+        .mvv-section { background-color: var(--light-gray); padding: 5rem 5%; }
+        .mvv-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto; }
+        .mvv-card { background: var(--white); padding: 2.5rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center; border-top: 4px solid var(--primary-green); }
+        .mvv-card h3 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--primary-green); }
+
+        .team-section { padding: 5rem 5%; max-width: 1000px; margin: 0 auto; text-align: center; }
+        .team-section p.subtitle { color: #64748b; margin-bottom: 3rem; font-size: 1.1rem; }
+
+        /* ================= FOOTER ================= */
+        footer { background-color: var(--dark-gray); color: #cbd5e1; padding: 4rem 5% 2rem 5%; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; max-width: 1200px; margin: 0 auto; border-bottom: 1px solid #334155; padding-bottom: 3rem; margin-bottom: 2rem; }
+        .footer-logo img { max-height: 40px; margin-bottom: 1rem; filter: brightness(0) invert(1); }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 0.8rem; display: flex; align-items: center; gap: 10px; }
+        .footer-links a { color: #cbd5e1; transition: color 0.3s; }
+        .footer-links a:hover { color: var(--primary-green); }
+        .footer-bottom { text-align: center; font-size: 0.9rem; }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .about-section { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">
+            <img src="logo-orooma.png" alt="Orooma, Lda">
+        </a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html" class="active">Sobre Nós</a></li>
+                <li><a href="servicos.html">Soluções HSEQ</a></li>
+                <li><a href="casos.html">Casos de Estudo</a></li>
+                <li><a href="contacto.html">Fale Connosco</a></li>
+            </ul>
+        </nav>
+        <a href="solicitar-diagnostico.html" class="btn-cta-nav">Pedir Diagnóstico</a>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>O Parceiro Estratégico da Sua Operação</h1>
+            <p>A Orooma, Lda é uma empresa moçambicana de referência, dedicada a elevar os padrões de Qualidade, Saúde, Segurança e Ambiente nos sectores mais exigentes do mercado.</p>
+        </section>
+
+        <section class="about-section">
+            <div class="about-text">
+                <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--dark-gray);">Quem Somos</h2>
+                <p>Com sede em Maputo, a <strong>Orooma, Lda</strong> nasceu da necessidade de colmatar uma lacuna crítica no mercado moçambicano: a oferta de consultoria HSEQ que alia o rigor das normas internacionais (ISO) ao profundo conhecimento da legislação e da realidade operacional local.</p>
+                <p>Apoiamos organizações nos sectores de Logística, Mineração, Oil & Gas e Indústria Transformadora a atingirem a excelência. Não nos limitamos a redigir manuais; construímos sistemas de gestão vivos, focados na mitigação de riscos, redução de custos e garantia de conformidade contínua.</p>
+                <p>A nossa equipa é composta por auditores e consultores seniores, especialistas em transformar a complexidade regulatória numa vantagem competitiva clara para o seu negócio.</p>
+            </div>
+            <div class="about-image"></div>
+        </section>
+
+        <section class="mvv-section">
+            <div class="mvv-grid">
+                <div class="mvv-card">
+                    <h3>A Nossa Missão</h3>
+                    <p>Capacitar empresas em Moçambique com soluções pragmáticas de Sistemas de Gestão e HSEQ, garantindo operações seguras, sustentáveis e em total conformidade legal, promovendo o zero dano às pessoas e ao ambiente.</p>
+                </div>
+                <div class="mvv-card">
+                    <h3>A Nossa Visão</h3>
+                    <p>Ser a empresa de consultoria e auditoria HSEQ de maior confiança em Moçambique, reconhecida por entregar resultados mensuráveis e por blindar os nossos clientes contra riscos operacionais e corporativos.</p>
+                </div>
+                <div class="mvv-card">
+                    <h3>Os Nossos Valores</h3>
+                    <p><strong>Rigor Técnico:</strong> Não abrimos exceções na qualidade e segurança.<br><strong>Pragmatismo:</strong> Soluções aplicáveis à realidade do terreno.<br><strong>Integridade:</strong> Transparência total em auditorias.<br><strong>Foco no Cliente:</strong> O sucesso da sua operação é a nossa métrica.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="team-section">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Experiência Comprovada</h2>
+            <p class="subtitle">Mais do que consultores, somos gestores de risco.</p>
+            <p style="font-size: 1.1rem; line-height: 1.8; text-align: left;">A Orooma, Lda orgulha-se de deter uma equipa de excelência, com capacidade comprovada para conduzir processos complexos de certificação e auditoria. Somos liderados por profissionais altamente qualificados, atuando como <strong>Auditores Principais (Lead Auditors)</strong> com vasta experiência no terreno. Dominamos integralmente as normas internacionais, conduzindo rigorosamente <strong>Auditorias de Fase 1 e Fase 2</strong> para a implementação e certificação em <strong>ISO 9001</strong> (Qualidade), <strong>ISO 14001</strong> (Ambiente) e <strong>ISO 45001</strong> (Saúde e Segurança). Garantimos um acompanhamento de proximidade e elevado rigor técnico a todos os nossos clientes de referência.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <a href="index.html" style="display: block; margin-bottom: 1rem;"><img src="logo-orooma.png" alt="Orooma, Lda"></a>
+                <p style="margin-top: 1rem;">Consultoria estratégica em Saúde, Segurança, Ambiente e Qualidade em Moçambique.</p>
+            </div>
+            <div>
+                <h4>Navegação</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre a Orooma</a></li>
+                    <li><a href="servicos.html">Soluções HSEQ</a></li>
+                    <li><a href="contacto.html">Fale Connosco</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Redes Sociais Orooma</h4>
+                <ul class="footer-links">
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        <a href="https://www.linkedin.com/company/orooma-hseq" target="_blank">LinkedIn</a>
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        <a href="https://www.instagram.com/orooma_hseq" target="_blank">Instagram</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Orooma, Lda. Todos os direitos reservados. NUIT: 401907378.</p>
+        </div>
+    </footer>
+</body>
+</html>
