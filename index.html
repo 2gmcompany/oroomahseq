@@ -1,141 +1,146 @@
 <!DOCTYPE html>
-<html lang="pt-MZ">
+<html lang="pt-PT">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orooma, Lda | Consultoria HSEQ & Sistemas ISO em Moçambique</title>
+    <meta name="description" content="Elevamos o padrão de Qualidade e Segurança da sua operação em Moçambique. Consultoria ISO 9001, 14001, 45001, Auditorias e Formação.">
+    
+    <link rel="icon" href="favicon.png" type="image/png">
+    
+    <style>
+        /* ================= GERAIS E VARIÁVEIS ================= */
+        :root {
+            --primary-green: #16a34a;
+            --dark-gray: #1e293b;
+            --light-gray: #f8fafc;
+            --white: #ffffff;
+            --text-gray: #475569;
+            --border-color: #e2e8f0;
+        }
 
-    <!-- SEO Básico -->
-    <title>Orooma, Lda | HSEQ</title>
-    <meta name="description" content="A Orooma, Lda é uma empresa moçambicana especializada em Qualidade, HSEQ, Sistemas ISO, Auditorias e Formação Profissional." />
-    <meta name="author" content="Orooma, Lda" />
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; scroll-behavior: smooth; }
+        body { line-height: 1.6; color: var(--text-gray); background-color: var(--white); }
+        h1, h2, h3, h4 { color: var(--dark-gray); font-weight: 700; }
+        a { text-decoration: none; color: var(--primary-green); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 4rem 5%; }
+        .section-header { text-align: center; margin-bottom: 4rem; }
+        .section-header h2 { font-size: 2.5rem; margin-bottom: 1rem; position: relative; display: inline-block; }
+        .section-header h2::after { content: ''; position: absolute; left: 50%; transform: translateX(-50%); bottom: -10px; width: 60px; height: 4px; background-color: var(--primary-green); }
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="favicon.png">
+        /* ================= HEADER / MENU ================= */
+        header { display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; background-color: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+        .logo img { max-height: 50px; width: auto; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: var(--dark-gray); font-weight: 600; transition: color 0.3s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--primary-green); }
+        .btn-cta-nav { background-color: var(--primary-green); color: var(--white); padding: 0.6rem 1.5rem; border-radius: 4px; font-weight: 600; transition: background 0.3s; }
+        .btn-cta-nav:hover { background-color: #15803d; color: var(--white); }
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        /* ================= HERO SECTION (INÍCIO) ================= */
+        .hero { background: linear-gradient(rgba(30, 41, 59, 0.85), rgba(30, 41, 59, 0.85)), url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover; color: var(--white); padding: 8rem 5%; text-align: center; }
+        .hero h1 { color: var(--white); font-size: 3.5rem; max-width: 900px; margin: 0 auto 1.5rem auto; line-height: 1.2; }
+        .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 2.5rem auto; color: #cbd5e1; }
+        .hero-buttons { display: flex; gap: 1rem; justify-content: center; }
+        .btn-primary { background-color: var(--primary-green); color: var(--white); padding: 1rem 2rem; font-size: 1.1rem; font-weight: 600; border-radius: 4px; border: none; cursor: pointer; transition: 0.3s; display: inline-block; }
+        .btn-primary:hover { background-color: #15803d; }
+        .btn-secondary { background-color: transparent; color: var(--white); padding: 1rem 2rem; font-size: 1.1rem; font-weight: 600; border-radius: 4px; border: 2px solid var(--white); cursor: pointer; transition: 0.3s; display: inline-block; }
+        .btn-secondary:hover { background-color: var(--white); color: var(--dark-gray); }
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles.css">
+        /* ================= BARRA DE EMPRESAS ================= */
+        .trust-bar { background-color: var(--light-gray); padding: 2rem 5%; text-align: center; border-bottom: 1px solid #e2e8f0; }
+        .trust-bar p { font-size: 0.9rem; color: #64748b; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; font-weight: 600; }
+        .client-logos { display: flex; justify-content: center; gap: 4rem; flex-wrap: wrap; font-weight: bold; color: #94a3b8; font-size: 1.2rem; }
+
+        /* ================= FOOTER ================= */
+        footer { background-color: var(--dark-gray); color: #cbd5e1; padding: 4rem 5% 2rem 5%; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; max-width: 1200px; margin: 0 auto; border-bottom: 1px solid #334155; padding-bottom: 3rem; margin-bottom: 2rem; }
+        .footer-logo img { max-height: 40px; margin-bottom: 1rem; filter: brightness(0) invert(1); }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 0.8rem; display: flex; align-items: center; gap: 10px; }
+        .footer-links a { color: #cbd5e1; transition: color 0.3s; }
+        .footer-links a:hover { color: var(--primary-green); }
+        .footer-bottom { text-align: center; font-size: 0.9rem; }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 2.5rem; }
+            .hero-buttons { flex-direction: column; }
+        }
+    </style>
 </head>
-
 <body>
 
-<!-- ================= HERO ================= -->
-<header class="hero">
-    <div class="hero-content">
-        <img src="logo-orooma.png" alt="Orooma, Lda" class="logo">
-
-        <h1>Orooma, Lda</h1>
-        <h2>Qualidade • Segurança • Ambiente • Sustentabilidade</h2>
-        <p>Gestão com propósito. Resultados com impacto.</p>
-
-        <a class="btn-primary"
-           href="https://wa.me/258879189698?text=Ol%C3%A1%20Orooma%2C%20gostaria%20de%20informações%20sobre%20os%20vossos%20serviços"
-           target="_blank">
-            Contactar via WhatsApp
+    <header>
+        <a href="index.html" class="logo">
+            <img src="logo-orooma.png" alt="Orooma, Lda">
         </a>
-    </div>
-</header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Início</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="servicos.html">Soluções HSEQ</a></li>
+                <li><a href="casos.html">Casos de Estudo</a></li>
+                <li><a href="contacto.html">Fale Connosco</a></li>
+            </ul>
+        </nav>
+        <a href="solicitar-diagnostico.html" class="btn-cta-nav">Pedir Diagnóstico</a>
+    </header>
 
-<!-- ================= SOBRE ================= -->
-<section class="section about">
-    <h3>Sobre a Orooma</h3>
-    <p>
-        A <strong>Orooma, Lda</strong> é uma empresa moçambicana especializada em
-        <strong>Qualidade, Saúde, Segurança e Ambiente (HSEQ)</strong>,
-        consultoria organizacional, auditorias, implementação de sistemas de
-        gestão ISO e formação profissional.
-    </p>
-    <p>
-        Actuamos com rigor técnico, ética profissional e foco na melhoria contínua,
-        apoiando organizações a alcançar conformidade, desempenho e sustentabilidade.
-    </p>
-</section>
+    <main>
+        <section class="hero">
+            <h1>Elevamos o Padrão de Qualidade e Segurança da Sua Operação</h1>
+            <p>Consultoria de excelência em Sistemas de Gestão Integrada (ISO 9001, 14001, 45001), Auditorias e Formação técnica para os sectores mais exigentes de Moçambique.</p>
+            <div class="hero-buttons">
+                <a href="solicitar-diagnostico.html" class="btn-primary">Agendar Diagnóstico Inicial</a>
+                <a href="servicos.html" class="btn-secondary">Explorar Soluções</a>
+            </div>
+        </section>
 
-<!-- ================= SERVIÇOS ================= -->
-<section class="section services">
-    <h3>Serviços</h3>
+        <section class="trust-bar">
+            <p>Empresas que confiam na Orooma para proteger ativos, pessoas e processos:</p>
+            <div class="client-logos">
+                <span>Empresa 1</span>
+                <span>Empresa 2</span>
+                <span>Empresa 3</span>
+            </div>
+        </section>
+    </main>
 
-    <div class="cards">
-        <div class="card">
-            <h4>Consultoria em Qualidade e HSEQ</h4>
-            <p>Assessoria técnica especializada para sistemas de Qualidade, Segurança, Saúde e Ambiente.</p>
-        </div>
-
-        <div class="card">
-            <h4>Implementação de Sistemas ISO</h4>
-            <p>ISO 9001, ISO 14001 e ISO 45001, adaptados à realidade organizacional.</p>
-        </div>
-
-        <div class="card">
-            <h4>Auditorias Internas e de Conformidade</h4>
-            <p>Auditorias técnicas com foco em conformidade normativa e melhoria contínua.</p>
-        </div>
-
-        <div class="card">
-            <h4>Sistemas de Gestão Integrados</h4>
-            <p>Integração eficiente de Qualidade, Ambiente e Segurança.</p>
-        </div>
-
-        <div class="card">
-            <h4>Formação e Capacitação Profissional</h4>
-            <p>Formações práticas e técnicas HSEQ e normas internacionais.</p>
-        </div>
-
-        <div class="card">
-            <h4>Documentação Técnica</h4>
-            <p>Especializada para concursos e projectos, SHE File, Planos de Emergência e procedimentos alinhados às normas e requisitos</p>
-        </div>
-    </div>
-</section>
-
-<!-- ================= DIFERENCIAIS ================= -->
-<section class="section diferencial">
-    <h3>Diferenciais</h3>
-    <ul>
-        <li>Segurança é inegociável</li>
-        <li>Excelência técnica e rigor normativo</li>
-        <li>Sustentabilidade como princípio estratégico</li>
-        <li>Abordagem prática e personalizada</li>
-        <li>Alinhamento com normas internacionais</li>
-    </ul>
-</section>
-
-<!-- ================= CTA ================= -->
-<section class="section cta">
-    <h3>Pronto para elevar o desempenho da sua organização?</h3>
-    <a class="btn-secondary" href="mailto:info@oroomahseq.com">
-        Fale connosco
-    </a>
-</section>
-
-<!-- ================= FOOTER ================= -->
-<footer>
-    <div class="footer-content">
-        <p>© Orooma, Lda</p>
-        <p>Qualidade | HSEQ | Sustentabilidade</p>
-
-        <div class="contacts">
-            <p>Av. Maguiguana R/C nº18, Maputo</p>
-            <p>Email: info@oroomahseq.com</p>
-            <p>Telefone: +258 87 918 9698</p>
-            <p>
-                <a href="https://www.linkedin.com/company/orooma-hseq/" target="_blank">
-                    LinkedIn Institucional
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <a href="index.html" style="display: block; margin-bottom: 1rem;">
+                    <img src="logo-orooma.png" alt="Orooma, Lda" style="max-height: 45px; filter: brightness(0) invert(1);">
                 </a>
-            </p>
+                <p style="margin-top: 1rem;">Consultoria estratégica em Saúde, Segurança, Ambiente e Qualidade em Moçambique.</p>
+            </div>
+            <div>
+                <h4>Navegação</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre a Orooma</a></li>
+                    <li><a href="servicos.html">Soluções HSEQ</a></li>
+                    <li><a href="contacto.html">Fale Connosco</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Redes Sociais Orooma</h4>
+                <ul class="footer-links">
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        <a href="https://www.linkedin.com/company/orooma-hseq" target="_blank">LinkedIn</a>
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        <a href="https://www.instagram.com/orooma_hseq" target="_blank">Instagram</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</footer>
-
-<!-- ================= WHATSAPP FLOAT ================= -->
-<a class="whatsapp-float"
-   href="https://wa.me/258879189698?text=Ol%C3%A1%20Orooma%2C%20gostaria%20de%20informações%20sobre%20os%20vossos%20serviços"
-   target="_blank">
-    WhatsApp
-</a>
-
-<script src="script.js"></script>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Orooma, Lda. Todos os direitos reservados. NUIT: 401907378.</p>
+        </div>
+    </footer>
 </body>
 </html>
